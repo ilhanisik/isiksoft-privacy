@@ -4,6 +4,42 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Köken — Gizlilik Politikası / Privacy Policy</title>
+<!--
+  ANDROID SÜRÜMÜ İÇİN GÜNCELLENDİ — 31 Ağustos 2026.
+
+  Yayındaki sayfa (https://ilhanisik.github.io/isiksoft-privacy/koken/) iOS'a
+  göre yazılmıştı. Android'de DEĞİŞEN üç şey vardı; üçü de burada düzeltildi:
+
+  1. EN ÖNEMLİSİ — "eksik kelime bildirimi sunucumuza gönderilir" cümlesi.
+     Android'de HİÇBİR ŞEY GÖNDERİLMİYOR: `RoomReportedWordsRepository.report()`
+     yalnızca yerel Room veritabanına yazar, ağ çağrısı yoktur. Eski metin
+     yayınlansaydı gizlilik politikamız uygulamanın topladığından DAHA FAZLA
+     veri topladığımızı iddia edecekti.
+  2. ATT (App Tracking Transparency) Android'de YOKTUR. Yerine Android'in
+     kendi reklam kimliği sıfırlama/silme yolu yazıldı.
+  3. Apple'ın "4+" derecelendirmesi kaldırıldı. Yerine sayısal bir derece
+     YAZILMADI: IARC anketi henüz gönderilmedi, sonucu peşinen iddia etmek
+     yanlış beyan olur. "Çocuklara yönelik pazarlama yapılmaz" cümlesi kaldı —
+     o her koşulda doğru.
+
+  Android'e ÖZGÜ olan Otomatik Yedekleme bölümü eklendi.
+
+  GÜNCELLEME (21:15) — ana oturum üç özelliği Android'e ekledi; sayfa buna göre
+  genişletildi:
+  · "Günlük hatırlatma": bildirim TAMAMEN yerel, push altyapısı yok, veri çıkmıyor.
+  · "Düello bağlantısı": sunucu yok, davet bağlantının içinde; paylaşma kararı
+    oyuncunun, bağlantıda kimlik bilgisi yok.
+  · "Satın alma": uçtan uca Google Play; ödeme bilgisi bize ULAŞMAZ, uygulama
+    yalnız yerel bir bayrak tutar.
+  Ayrıca "Sözlükte yok" bölümüne Ayarlar'daki "Listeyi paylaş" satırı eklendi —
+  liste yine kendiliğinden hiçbir yere gitmiyor, gönderme kararı oyuncunun.
+
+  YAYIN YERİ: Bu metin mevcut /koken/ adresinin YERİNE konabilir — iOS'a özgü
+  farklar aşağıdaki "Platform farkları" kutusunda korunuyor, bu yüzden tek URL
+  iki mağazaya da hizmet eder. Böylece uygulamadaki `privacy_policy_url`
+  dizesini değiştirmek GEREKMEZ. Ayrı bir /koken/android/ adresine konursa
+  o dize de güncellenmelidir (app/src altında — ana oturumun işi).
+-->
 <style>
   :root { color-scheme: light dark; }
   body {
@@ -17,138 +53,287 @@
   .tag { color: #6b5844; font-size: .95rem; }
   ul { padding-left: 1.2rem; }
   a { color: #4c6b45; }
+  .kutu {
+    border-left: 3px solid #4c6b45; background: #ffffff80;
+    padding: .8rem 1rem; margin: 1.5rem 0; border-radius: 0 .4rem .4rem 0;
+  }
+  .kutu p { margin: 0 0 .5rem; }
+  .kutu p:last-child { margin-bottom: 0; }
   @media (prefers-color-scheme: dark) {
     body { color: #e4e9da; background: #14170f; }
     a { color: #9dbe8f; }
     h2 { border-color: #6b584480; }
     .tag { color: #c9b196; }
+    .kutu { border-left-color: #9dbe8f; background: #ffffff10; }
   }
 </style>
 </head>
 <body>
 <h1>Köken — Kelime Ağacı</h1>
-<p class="tag">Gizlilik Politikası · Privacy Policy — Son güncelleme / Last updated: 12 Ağustos 2026</p>
+<p class="tag">Gizlilik Politikası · Privacy Policy — Son güncelleme / Last updated: 31 Ağustos 2026</p>
+<p class="tag">Işıksoft Yazılım A.Ş. · <a href="mailto:info@isiksoft.com">info@isiksoft.com</a></p>
 
 <h2>Türkçe</h2>
 <p>
   Köken sizi tanımlayan bir veri toplamaz: hesap açmanızı istemez; ad, e-posta,
   telefon, konum veya kişi listesi istemez. İlerlemeniz (ağaçlarınız, bahçeniz,
-  seriniz, ayarlarınız) yalnızca cihazınızda saklanır, sunucuya yüklenmez ve
-  uygulamayı silerseniz cihazınızdan silinir. Sunucumuza giden tek şey, aşağıda
-  anlatılan “eksik kelime bildirimi”dir.
+  seriniz, kelime defteriniz, ayarlarınız) yalnızca cihazınızda saklanır,
+  sunucumuza yüklenmez ve uygulamayı silerseniz cihazınızdan silinir.
 </p>
 
 <h3>Reklamlar</h3>
 <p>
   Köken, Google AdMob aracılığıyla reklam gösterir. <strong>Oyun ekranında reklam
-  yoktur</strong>: ağaç büyütürken, harf eklerken, kelime ararken hiçbir reklam
-  çıkmaz.
+  yoktur</strong>: ağaç büyütürken, harf eklerken hiçbir reklam çıkmaz — banner
+  bile.
 </p>
 <ul>
-  <li>Geçiş reklamları yalnızca bir oturumun <strong>bittiği</strong> anda çıkar:
-      gün sonu karnesini kapatırken, Zincir Ustası ve Düello sonucundan çıkarken,
-      Serbest Bahçe’de yeni kök isterken. Sıklığı sınırlıdır.</li>
-  <li>Ödüllü reklamlar yalnızca <strong>sizin başlattığınız</strong> seçimlerdedir
-      (ipucu, bonus kök). Günün ilk ipucu reklamsızdır.</li>
   <li>Banner reklam yalnızca oyun <strong>dışı</strong> ekranlarda görünür:
       Bahçem, Defterim ve Ayarlar.</li>
-</ul>
-<ul>
-  <li>Google, reklamları sunmak ve ölçmek için cihaz tanımlayıcıları ve reklam
-      etkileşimi gibi verileri işleyebilir. Ayrıntı:
+  <li>Geçiş reklamları yalnızca bir oturumun <strong>bittiği</strong> anda çıkar:
+      gün sonu karnesini kapatırken, Zincir Ustası sonucundan çıkarken ve
+      Serbest Bahçe’de yeni kök isterken. Sıklığı sınırlıdır.</li>
+  <li><strong>Uygulama açılışında reklam gösterilmez.</strong></li>
+  <li>Ödüllü reklamlar yalnızca <strong>sizin başlattığınız</strong> seçimlerdedir
+      (ipucu, bonus kök, seri kurtarma). Günün ilk ipucu reklamsızdır. Hiç
+      izlemezseniz oyun aynı şekilde çalışır.</li>
+  <li>Google, reklamları sunmak ve ölçmek için <strong>reklam kimliği</strong> gibi
+      cihaz tanımlayıcılarını ve reklam etkileşimi verisini işleyebilir. Ayrıntı:
       <a href="https://policies.google.com/technologies/partner-sites">Google’ın iş ortağı sitelerinde veri kullanımı</a>.</li>
-  <li>Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre’de, reklam öncesi
-      Google’ın onay formu (UMP) gösterilir; tercihinizi Ayarlar → Reklamlar →
-      “Reklam gizlilik tercihleri” bölümünden dilediğiniz an değiştirebilirsiniz.</li>
-  <li>iOS’ta izleme izni (ATT) istenir. <strong>İzin vermezseniz oyun aynı şekilde
-      çalışır</strong>; reklamlar yalnızca daha genel olur.</li>
-  <li>“Reklamları Kaldır” satın alımı reklamları tamamen kapatır.</li>
+  <li>Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre’de, reklam yüklenmeden
+      önce Google’ın onay formu (UMP) gösterilir; tercihinizi
+      <strong>Ayarlar → Reklamlar → “Reklam gizlilik tercihleri”</strong>
+      bölümünden dilediğiniz an değiştirebilirsiniz.</li>
+  <li><strong>“Reklamları Kaldır”</strong> satın alması tüm reklamları tamamen
+      kapatır.</li>
 </ul>
 
-<h3>Eksik kelime bildirimi</h3>
+<h3>Reklam kimliğinizi sıfırlama veya silme</h3>
 <p>
-  Sözlükte olmayan bir kelime denediğinizde “bildir” seçeneği çıkar. Bu seçeneğe
-  <strong>siz basarsanız</strong>, sözlüğü geliştirebilmemiz için yalnızca
-  <strong>o kelime ve gün numarası</strong> sunucumuza gönderilir. Bildirmediğiniz
-  hiçbir kelime, hiçbir oyun verisi gönderilmez.
+  Reklam kimliği Android’in size verdiği, sıfırlanabilir bir numaradır; adınızla
+  ya da hesabınızla ilişkili değildir. Denetimi sizdedir:
 </p>
 <ul>
-  <li>Kayıt sizinle ilişkilendirilmez: kimlik, hesap, cihaz numarası, reklam
-      kimliği ya da konum gönderilmez.</li>
-  <li>Yalnızca sözlüğü genişletmek için kullanılır; reklamcılıkla ilgisi yoktur ve
-      üçüncü taraflarla paylaşılmaz.</li>
-  <li>Bildirdiğiniz kelimeler cihazınızda da durur; Ayarlar’dan görebilirsiniz.</li>
+  <li><strong>Ayarlar → Güvenlik ve gizlilik → Gizlilik → Reklamlar</strong>
+      (bazı cihazlarda <strong>Ayarlar → Google → Tüm hizmetler → Reklamlar</strong>).
+      Menü adları üreticiye ve Android sürümüne göre değişebilir.</li>
+  <li><strong>Reklam kimliğini sıfırla</strong>: yeni bir numara verilir, eskisiyle
+      bağınız kopar.</li>
+  <li><strong>Reklam kimliğini sil</strong> (Android 12 ve sonrası): uygulamalar
+      artık kimlik yerine yalnızca sıfırlardan oluşan bir değer alır; kişiselleştirilmiş
+      reklam durur.</li>
 </ul>
+<p>Her iki durumda da oyun aynı şekilde çalışır; reklamlar yalnızca daha genel olur.</p>
+
+<h3>Günlük hatırlatma</h3>
+<p>
+  Ayarlar’dan açabileceğiniz isteğe bağlı bir hatırlatma vardır;
+  <strong>varsayılan olarak kapalıdır</strong>. Açarsanız Android sizden bildirim
+  izni ister. Hatırlatma <strong>tamamen cihazınızda</strong> zamanlanır: uzak
+  bildirim (push) altyapısı kullanılmaz, bize hiçbir veri gitmez ve hatırlatmanın
+  kurulduğu bilgisi cihazınızdan çıkmaz. İzni istediğiniz an Android ayarlarından
+  ya da uygulama içindeki anahtardan geri alabilirsiniz.
+</p>
+
+<h3>Düello bağlantısı</h3>
+<p>
+  Düello davetini <strong>siz</strong> gönderirsiniz. Davet
+  <code>koken://duel?…</code> biçiminde bir bağlantıdır ve kökünüz ile skorunuz
+  <strong>bağlantının kendi içinde</strong> taşınır — bizim bir düello sunucumuz,
+  hesabınız ya da sıralamanız yoktur.
+</p>
+<ul>
+  <li>Bağlantıyı kime göndereceğinize siz karar verirsiniz; gönderdiğiniz
+      uygulamanın (mesajlaşma, e-posta vb.) kendi gizlilik politikası geçerli olur.</li>
+  <li>Bağlantıda adınız, e-postanız ya da cihaz kimliğiniz <strong>yoktur</strong>.</li>
+  <li>Size gelen bir daveti açtığınızda da hiçbir şey bize gönderilmez.</li>
+</ul>
+
+<h3>Satın alma</h3>
+<p>
+  “Reklamları Kaldır” tek seferlik bir satın almadır ve uçtan uca
+  <strong>Google Play</strong> üzerinden yürür. <strong>Ödeme bilgileriniz bize
+  ulaşmaz</strong>: kart numarasını, adınızı ya da fatura adresinizi görmeyiz ve
+  saklamayız. Uygulama yalnızca cihazınızda “reklamlar kaldırıldı” bilgisini
+  tutar. Satın almanın kaydı Google hesabınızdadır; uygulamayı yeniden
+  kurduğunuzda oradan geri yüklenir.
+</p>
+
+<h3>“Sözlükte yok” bildirimi</h3>
+<p>
+  Sözlükte bulunmayan bir kelime denediğinizde “bildir” seçeneği çıkar. Bu
+  seçeneğe bastığınızda kelime <strong>yalnızca cihazınızdaki listeye
+  kaydedilir</strong>. Android sürümünde bu liste
+  <strong>hiçbir sunucuya gönderilmez</strong> ve uygulamayı sildiğinizde
+  cihazınızdan silinir. Ayarlar’daki <strong>“Listeyi paylaş”</strong> satırı
+  listeyi yalnızca <strong>siz</strong> bastığınızda, yalnızca
+  <strong>sizin seçtiğiniz</strong> uygulamaya (örneğin e-posta) verir —
+  kendiliğinden hiçbir yere gitmez.
+</p>
+
+<h3>Cihaz yedeklemesi</h3>
+<p>
+  Köken, Android’in standart <strong>Otomatik Yedekleme</strong> özelliğini
+  kullanır: oyun ilerlemeniz ve ayarlarınız, telefonunuzu değiştirdiğinizde
+  kaybolmasın diye <strong>sizin kendi Google hesabınızın</strong> yedeğine
+  alınabilir. Bu yedek Google’ın altyapısındadır ve cihaz kilidinizden türeyen
+  bir anahtarla korunur; <strong>bize gelmez ve biz erişemeyiz</strong>.
+  İstemiyorsanız Android’in yedekleme ayarlarından kapatabilirsiniz.
+</p>
 
 <h3>Toplamadığımız şeyler</h3>
 <ul>
   <li>Hesap açmanızı istemeyiz; ad, e-posta, konum veya kişi listesi istemeyiz.</li>
   <li>Kendi analitiğimiz yoktur; çökme raporlama aracı kullanmayız.</li>
-  <li>Oyun ilerlemeniz sunucuya gitmez.</li>
+  <li>Oyun ilerlemeniz sunucumuza gitmez — bizim bir oyun sunucumuz yoktur.</li>
+  <li>Uygulama konum, kamera, mikrofon, kişiler veya depolama izni istemez.</li>
 </ul>
-<p>Çocuklara yönelik pazarlama yapılmaz; oyun 4+ derecelendirmesindedir.</p>
-<p>Sorularınız için: <a href="mailto:info@isiksoft.com">info@isiksoft.com</a></p>
+<p>Çocuklara yönelik pazarlama yapılmaz.</p>
+<p>
+  Bu politika değişirse bu sayfadaki “son güncelleme” tarihi değişir.
+  Sorularınız için: <a href="mailto:info@isiksoft.com">info@isiksoft.com</a>
+</p>
+
+<div class="kutu">
+  <p><strong>Platform farkları.</strong> Bu sayfa Köken’in
+  <strong>Google Play (Android)</strong> sürümünü anlatır. App Store’daki iOS
+  sürümü iki noktada farklıdır:</p>
+  <p>· iOS, reklamlardan önce <strong>izleme izni (ATT)</strong> ister; Android’de
+  böyle bir istem yoktur, denetim yukarıdaki reklam kimliği ayarlarındadır.</p>
+  <p>· iOS sürümünde “sözlükte yok” bildirimleri, sözlüğü geliştirmek için
+  <strong>sunucumuza gönderilir</strong> (yalnız kelime ve gün numarası, kimlik
+  bilgisi olmadan). <strong>Android sürümünde gönderilmez</strong>, cihazda kalır.</p>
+</div>
 
 <h2>English</h2>
 <p>
   Köken collects no data that identifies you: no account, name, email, phone,
-  location or contacts. Your progress (trees, garden, streak, settings) is stored
-  only on your device, is never uploaded, and is removed when you delete the app.
-  The only thing that reaches our server is the “missing word report” described
-  below.
+  location or contacts. Your progress (trees, garden, streak, word notebook and
+  settings) is stored only on your device, is never uploaded to us, and is
+  removed when you delete the app.
 </p>
 
 <h3>Advertising</h3>
 <p>
-  Köken shows ads through Google AdMob. <strong>There are no ads on the play
-  screen</strong>: none while you grow your tree, add letters or search for words.
+  Köken shows ads through Google AdMob. <strong>There are no ads on the game
+  board</strong>: nothing appears while you grow your tree or add letters — not
+  even a banner.
 </p>
 <ul>
+  <li>Banner ads appear only on <strong>non-gameplay</strong> screens: My Garden,
+      My Notebook and Settings.</li>
   <li>Interstitial ads appear only when a session <strong>ends</strong>: closing
-      the end-of-day summary, leaving a Chain Master or Duel result, or asking for
-      a new root in Free Garden. Their frequency is capped.</li>
+      the end-of-day summary, leaving a Chain Master result, or asking for a new
+      root in Free Garden. Their frequency is capped.</li>
+  <li><strong>There is no app-open ad.</strong></li>
   <li>Rewarded ads happen only in actions <strong>you start yourself</strong>
-      (hint, bonus root). Your first hint each day needs no ad.</li>
-  <li>Banner ads appear only on non-gameplay screens: My Garden, My Notebook and
-      Settings.</li>
-</ul>
-<ul>
-  <li>Google may process device identifiers and ad interaction data to serve and
-      measure ads. See
+      (hint, bonus root, streak rescue). Your first hint each day needs no ad.
+      If you never watch one, the game works exactly the same.</li>
+  <li>Google may process device identifiers such as the <strong>advertising ID</strong>
+      and ad interaction data to serve and measure ads. See
       <a href="https://policies.google.com/technologies/partner-sites">How Google uses data from partner sites</a>.</li>
   <li>In the EEA, UK and Switzerland, Google’s consent form (UMP) is shown before
-      ads; you can change your choice any time in Settings → Ads → “Ad privacy settings”.</li>
-  <li>iOS asks for tracking permission (ATT). <strong>If you decline, the game works
-      exactly the same</strong>; ads simply become less specific.</li>
-  <li>The “Remove Ads” purchase turns ads off completely.</li>
+      ads load; you can change your choice any time in
+      <strong>Settings → Ads → “Ad privacy settings”</strong>.</li>
+  <li>The <strong>“Remove Ads”</strong> purchase turns every ad off completely.</li>
 </ul>
 
-<h3>Missing-word reports</h3>
+<h3>Resetting or deleting your advertising ID</h3>
 <p>
-  When you try a word that is not in the dictionary, a “report” option appears.
-  If <strong>you</strong> tap it, only <strong>that word and a day number</strong>
-  are sent to our server so we can improve the dictionary. Nothing is sent for
-  words you do not report, and no game data is sent.
+  The advertising ID is a resettable number Android gives you; it is not tied to
+  your name or account. You are in control:
 </p>
 <ul>
-  <li>The record is not linked to you: no identity, account, device number,
-      advertising identifier or location is sent.</li>
-  <li>It is used solely to extend the dictionary; it plays no part in advertising
-      and is not shared with third parties.</li>
-  <li>Your reported words also stay on your device — you can see them in Settings.</li>
+  <li><strong>Settings → Security &amp; privacy → Privacy → Ads</strong>
+      (on some devices <strong>Settings → Google → All services → Ads</strong>).
+      Menu names vary by manufacturer and Android version.</li>
+  <li><strong>Reset advertising ID</strong>: you get a new number and the link to
+      the old one is broken.</li>
+  <li><strong>Delete advertising ID</strong> (Android 12 and later): apps receive
+      a string of zeros instead of an ID, and personalised advertising stops.</li>
 </ul>
+<p>Either way the game works exactly the same; ads simply become less specific.</p>
+
+<h3>Daily reminder</h3>
+<p>
+  There is an optional reminder you can switch on in Settings; it is
+  <strong>off by default</strong>. If you turn it on, Android asks you for
+  notification permission. The reminder is scheduled
+  <strong>entirely on your device</strong>: no push infrastructure is used, no
+  data reaches us, and the fact that a reminder is scheduled never leaves your
+  phone. You can withdraw the permission at any time in Android settings or with
+  the in-app switch.
+</p>
+
+<h3>Duel links</h3>
+<p>
+  <strong>You</strong> send the duel invitation. It is a link of the form
+  <code>koken://duel?…</code> and your root and score travel
+  <strong>inside the link itself</strong> — we run no duel server, no account and
+  no leaderboard.
+</p>
+<ul>
+  <li>You decide who receives the link; the privacy policy of the app you send it
+      through (messaging, email, and so on) then applies.</li>
+  <li>The link contains <strong>no</strong> name, email or device identifier.</li>
+  <li>Opening an invitation someone sent you also sends nothing to us.</li>
+</ul>
+
+<h3>Purchases</h3>
+<p>
+  “Remove Ads” is a single one-time purchase handled end to end by
+  <strong>Google Play</strong>. <strong>Your payment details never reach us</strong>:
+  we do not see or store your card number, name or billing address. The app only
+  keeps a “ads removed” flag on your device. The record of the purchase lives in
+  your Google account and is restored from there if you reinstall.
+</p>
+
+<h3>“Not in the dictionary” reports</h3>
+<p>
+  When you try a word that is not in the dictionary, a “report” option appears.
+  If you tap it, the word is <strong>saved only to a list on your device</strong>.
+  In the Android version this list is <strong>never sent to any server</strong>
+  and is deleted with the app. The <strong>“Share list”</strong> row in Settings
+  hands the list to an app <strong>you</strong> choose (email, for example), and
+  only when <strong>you</strong> tap it — nothing goes anywhere on its own.
+</p>
+
+<h3>Device backup</h3>
+<p>
+  Köken uses Android’s standard <strong>Auto Backup</strong>: your progress and
+  settings may be included in <strong>your own Google account’s</strong> backup so
+  they survive a new phone. That backup lives in Google’s infrastructure and is
+  protected with a key derived from your device lock; <strong>it does not come to
+  us and we cannot read it</strong>. You can turn it off in Android’s backup settings.
+</p>
 
 <h3>What we do not collect</h3>
 <ul>
   <li>No account, name, email, location, or contacts.</li>
   <li>No analytics of our own; no crash-reporting tool.</li>
-  <li>Your game progress never leaves your device.</li>
+  <li>Your game progress never reaches us — we run no game server.</li>
+  <li>The app requests no location, camera, microphone, contacts or storage permission.</li>
 </ul>
-<p>We do not market to children; the app is rated 4+.</p>
-<p>Questions: <a href="mailto:info@isiksoft.com">info@isiksoft.com</a></p>
+<p>We do not market to children.</p>
+<p>
+  If this policy changes, the “last updated” date on this page changes.
+  Questions: <a href="mailto:info@isiksoft.com">info@isiksoft.com</a>
+</p>
+
+<div class="kutu">
+  <p><strong>Platform differences.</strong> This page describes the
+  <strong>Google Play (Android)</strong> version of Köken. The iOS version on the
+  App Store differs in two ways:</p>
+  <p>· iOS asks for <strong>tracking permission (ATT)</strong> before ads; Android
+  has no such prompt — control lives in the advertising ID settings above.</p>
+  <p>· On iOS, “not in the dictionary” reports <strong>are sent to our server</strong>
+  to improve the dictionary (only the word and a day number, with no identifying
+  information). <strong>On Android nothing is sent</strong>; it stays on the device.</p>
+</div>
 
 <h2>Destek / Support</h2>
-<p>Öneri, hata bildirimi ve eksik kelime bildirimleri için:
+<p>Öneri, hata bildirimi ve eksik kelime bildirimleri için /
+   For suggestions, bug reports and missing-word reports:
    <a href="mailto:info@isiksoft.com">info@isiksoft.com</a></p>
 </body>
 </html>
